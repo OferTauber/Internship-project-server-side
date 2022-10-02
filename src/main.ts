@@ -12,7 +12,7 @@ async function bootstrap() {
     .then(() => {
       console.log('Server is up and listening to port ' + PORT);
     })
-    .catch((err) => {
+    .catch((err: any) => {
       console.error('Error!', err.massage);
     });
 }
