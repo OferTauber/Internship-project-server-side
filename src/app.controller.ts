@@ -5,7 +5,7 @@ import run, {
   getUserById,
   addTokenToUser,
   uploadPortsChancks,
-  getFirstOrderPorts,
+  getAllFirstOrderPortsFromDB,
   uploadSecondOrderPorts,
   getSecondOrderPort,
 } from './utils/mogo';
@@ -25,7 +25,7 @@ export class AppController {
   //   const user = await getUserById('633ab0d8ed09597be1ae72ef');
   //   return await getSecondOrderPort('wld_trs_ports_wfp.14315');
   //   return await uploadSecondOrderPorts();
-  //   return await getFirstOrderPorts();
+  //   return await getAllFirstOrderPorts();
   //   return await uploadPortsChancks();
   //   return await addTokenToUser(user, '123');
   //   return await getUserById('633ab0d8ed09597be1ae72ef');

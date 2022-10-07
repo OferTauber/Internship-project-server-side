@@ -4,7 +4,8 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { getUserFromDB } from 'src/utils/dynamoDb';
+import { getUserFromDB } from 'src/utils/mogo';
+
 import * as jwt from 'jsonwebtoken';
 import { jwtSecret } from 'src/utils/EnvironmentVariables';
 

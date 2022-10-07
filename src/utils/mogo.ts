@@ -102,7 +102,7 @@ export const removeTokenFromUser = async (
   }
 };
 
-export const getFirstOrderPorts = async () => {
+export const getAllFirstOrderPortsFromDB: any = async () => {
   try {
     return await firstOrderPortsColection.find({}).toArray();
   } catch (e) {
@@ -110,7 +110,7 @@ export const getFirstOrderPorts = async () => {
   }
 };
 
-export const getSecondOrderPort = async (id: string) => {
+export const getSecondOrderPort = async (id: string): Promise<any> => {
   try {
     return await secondOrderPortsColection.findOne({ id });
   } catch (e) {
