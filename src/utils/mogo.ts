@@ -2,9 +2,11 @@ import { MongoClient, ObjectId } from 'mongodb';
 import { MONGO_PASSWORD, MONGO_USERNAME } from './EnvironmentVariables';
 import UserDTO from 'src/Data_transfer_objects/user.dto';
 import { convertItemToUserDTO } from 'src/Data_transfer_objects/user.dto';
+
 // import { ports } from './temp'; // todo remove!!!!!
 // import { chankes } from './chankes'; // todo remove!!!!!
 // import secondOrderPorts from './second_order_ports'; // todo remove!!!!!
+
 
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@docktech.4vkoqas.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -117,3 +119,4 @@ export const getSecondOrderPort = async (id: string): Promise<any> => {
     console.log(e);
   }
 };
+
