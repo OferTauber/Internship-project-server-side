@@ -5,7 +5,7 @@ import { PORT, CORS } from './utils/EnvironmentVariables';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.enableCors({ origin: CORS });
+  app.enableCors({ origin: '*' });
   app.use(cookieParser());
   await app
     .listen(PORT)
