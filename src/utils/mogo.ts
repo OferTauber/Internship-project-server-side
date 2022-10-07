@@ -2,9 +2,11 @@ import { MongoClient, ObjectId } from 'mongodb';
 import { MONGO_PASSWORD, MONGO_USERNAME } from './EnvironmentVariables';
 import UserDTO from 'src/Data_transfer_objects/user.dto';
 import { convertItemToUserDTO } from 'src/Data_transfer_objects/user.dto';
-import { ports } from './temp'; // todo remove!!!!!
-import { chankes } from './chankes'; // todo remove!!!!!
-import secondOrderPorts from './second_order_ports'; // todo remove!!!!!
+
+// import { ports } from './temp'; // todo remove!!!!!
+// import { chankes } from './chankes'; // todo remove!!!!!
+// import secondOrderPorts from './second_order_ports'; // todo remove!!!!!
+
 
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@docktech.4vkoqas.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -118,35 +120,3 @@ export const getSecondOrderPort = async (id: string): Promise<any> => {
   }
 };
 
-// todo remove!!!!
-export const uploadPortsChancks = async () => {
-  try {
-    const docs = chankes;
-
-    const insertManyresult = await firstOrderPortsColectionTest.insertMany(
-      docs,
-    );
-    let ids = insertManyresult.insertedIds;
-
-    console.log(`${insertManyresult.insertedCount} documents were inserted.`);
-    // for (let id of Object.values(ids)) {
-    //   console.log(`Inserted a document with id ${id}`);
-    // }
-  } catch (e) {
-    console.log(
-      `A MongoBulkWriteException occurred, but there are successfully processed documents.`,
-    );
-    let ids = e.result.result.insertedIds;
-    for (let id of Object.values(ids)) {
-      const temp: any = id;
-      console.log(`Processed a document with id ${temp._id}`);
-    }
-    console.log(`Number of documents inserted: ${e.result.result.nInserted}`);
-  }
-};
-
-// todo remove!!!!
-export const uploadSecondOrderPorts = async () => {
-  // secondOrderPorts
-  return await secondOrderPortsColection.insertMany(secondOrderPorts);
-};
