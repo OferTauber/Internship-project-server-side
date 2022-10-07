@@ -1,8 +1,11 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import // getAllFirstOrderPortsFromDB,
+// getSecondOrderPort,
+'../../utils/dynamoDb';
 import {
   getAllFirstOrderPortsFromDB,
   getSecondOrderPort,
-} from '../../utils/dynamoDb';
+} from '../../utils/mogo';
 import FirstOrderPortDTO from 'src/Data_transfer_objects/port.dto';
 import SecondOrderPortDTO from 'src/Data_transfer_objects/second_order_port.dto';
 
