@@ -5,6 +5,7 @@ import {
   Body,
   Get,
   HttpException,
+  Param,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 

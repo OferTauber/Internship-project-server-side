@@ -10,11 +10,16 @@ import AuthCredentialsDTO from 'src/Data_transfer_objects/auth_credentials.dto';
 import * as jwt from 'jsonwebtoken';
 import PayloadDto from 'src/Data_transfer_objects/payload.dto';
 import {
+  // getUserFromDB,
+  // addTokenToUser,
+  // removeTokenFromUser,
+  removeAllUserTokens,
+} from 'src/utils/dynamoDb';
+import {
   getUserFromDB,
   addTokenToUser,
   removeTokenFromUser,
-  removeAllUserTokens,
-} from 'src/utils/dynamoDb';
+} from '../../utils/mogo';
 import { jwtSecret } from '../../utils/EnvironmentVariables';
 
 @Injectable()
@@ -80,6 +85,10 @@ export class AuthService {
 
   isTokenValid(token: string): boolean {
     return !!jwt.verify(token, jwtSecret);
+  }
+
+  async getPassword(str: string): Promise<string> {
+    return await bcrypt.hash(str, 10);
   }
 
   //* ============ Privet ============

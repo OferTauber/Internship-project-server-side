@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "docktech-internship-363312",
+  "private_key_id": "182a96a732da72e7fdc12ae83b8f31dd397192d9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCn7gdyR9os7suP\nOF1K3rsjPOflxKn/NyML6bV/xql1ueXWj4A6uvuGVo2icVUuW1CqxplPG3ojnM71\nAnbcPBqGj2piEPb9f/2xy/cLlN+aEXA7EOME7xTT6aaSb04XoLHBuIVN1S5GCNdl\nWtBqgnXfm2bAXP3Ju6Msr5d2NLpfGtKkOU7sKI+e/nl37dB2bwk59tpc/Cgd+lnH\nuKvtiTv9lxUWE2eHIWtRnHve3QmEUmetMyWzdHj8Gx1pUM6JRbY5h4YY3WeAvrno\nRRQtnhqmc9VMRbY23+p4n7Cp8xXBdKZIG733eWUYgHIipeUqh1ERnPdxnJZbnlZb\nMkooqKdJAgMBAAECggEACGMj1ZIfpD9gBNz2keL6e0nTNj9ikzfkhPeNBF7+fz4D\n6/m6WJSWs/C2Pb8F110htAnbxd70NHukPYn8OEc7Nu3KTTAWOfaOy/bJNbefjGEj\nFxwijpBHXMcudeFfx9/TiP6nj8neOArAgVQuFSfDbeHj2ac7WLxJq9VwTevXxCCs\n2ZW1Z7krlF0wSS28t0MgYRaNV8FopF4+wUBVUB8BLT/rxd7SShcPzcT12TlrkZGt\ne7WYZ0WpnEt/bSMEJHdkb0wus36waq7mXjkak2VUbgTdwsGtm4lEM5XAdzb+xZtH\nkvfRNpf+TvV5/6ppc1NM+Ls0wOm8gyZERoVM5pqjVQKBgQDY4b+Si9INN6Xcvuoc\nPENmOf+WcrWpopyOu1cLVZv09yon/ZWd5mIdfgjxCwPy9foius+ibQ8BXR4SAhOH\nOfrqssjcNy71pAnTh8f8XV6mAeqGjbOhE5AII5BuavKBNzrIqpyA4F48ah28QccK\njmP0CuzaiZ6ZGp/834Ywc22dfQKBgQDGN/sneGas1G2AhNjGbjs6frDIv/a6aHLN\nahvb9U3S2B4gygAhlOj/gzv6LwoBQ6eg6SdhV6LuA6zNuXE6IfyIzHCmRSI4vWrj\n01KBBm9fa6yd8RRP+VfDw43WVr3yUzOTQewDofOIpfSsNVgR57pN8t4P9ASGj1uA\n0dV6wQ6KvQKBgQCxzjoByfGWdnXbiQVjyqAzEf+Rd0+p2C/j8IDHQRNP/Map7IMZ\n5cOwjCCGhVJigPjmOiN59VEk/BNoDh22cnlcquBzciZkqmyH6DyzkFTFYrLERy3q\nM6CUm5uQest/1iiyVPVjzw5TF2hza7Xj2KLnc4GFFOhaevKJHTPlSuyl/QKBgDJX\nHU3U4h6ahITTOEqMzDX63uLc/cgxppZMkG64Sd92S5CAPLBKpTHfHmhXce8IQ5Y2\nIG40V4ijHkvRANSGtR/469MOU7adRHw/uwBRpg9RxTEHfOUiqgtpqqf4t5zHTJ3l\nbA8wHi1iGFVz5r4FX+dT+tmKW2vhFJgOsmzOgubxAoGAWTzRrfa9wmf9XwvDTKA+\nKwU80W3pHevg5EvRMmhApFBcnvhGLU8l/BD8fITtAmjUVXBecz7dsejoqab4XnoK\nugAIHJOyI/e3mNfP8Hlv8u9jVHtp2z0kfp/pbjQZUxyYgkmb34g2lZgSo37nhTNT\n4rbhXhxlN0dY/cQDWMKk/PY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ofer-service-account@docktech-internship-363312.iam.gserviceaccount.com",
+  "client_id": "109798713658113986744",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ofer-service-account%40docktech-internship-363312.iam.gserviceaccount.com"
+}
