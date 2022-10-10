@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from 'mongodb';
+import { MongoClient, ObjectId, ServerApiVersion } from 'mongodb';
 import { MONGO_PASSWORD, MONGO_USERNAME } from './EnvironmentVariables';
 import UserDTO from 'src/Data_transfer_objects/user.dto';
 import { convertItemToUserDTO } from 'src/Data_transfer_objects/user.dto';
@@ -7,10 +7,18 @@ import { convertItemToUserDTO } from 'src/Data_transfer_objects/user.dto';
 // import { chankes } from './chankes'; // todo remove!!!!!
 // import secondOrderPorts from './second_order_ports'; // todo remove!!!!!
 
-
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@docktech.4vkoqas.mongodb.net/?retryWrites=true&w=majority`;
 
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
+client.connect((err) => {
+  const collection = client.db('test').collection('devices');
+  // perform actions on the collection object
+  client.close();
+});
 const database = client.db('PortsApp');
 const usersCollection = database.collection('users');
 const firstOrderPortsColection = database.collection('first-order-ports');
@@ -31,7 +39,7 @@ const run = async () => {
 };
 export default run;
 
-export const getUserFromDB = async (email: string): Promise<UserDTO> => {
+export const getUserFromDB = async (email) => {
   try {
     const query = { email };
     const user = await usersCollection.findOne(query);
@@ -48,7 +56,7 @@ export const getUserFromDB = async (email: string): Promise<UserDTO> => {
   }
 };
 
-export const getUserById = async (id: string): Promise<UserDTO> => {
+export const getUserById = async (id) => {
   try {
     const query = { _id: new ObjectId(id) };
     const user = await usersCollection.findOne(query);
@@ -63,7 +71,7 @@ export const getUserById = async (id: string): Promise<UserDTO> => {
   }
 };
 
-export const addTokenToUser = async (user: UserDTO, newToken: string) => {
+export const addTokenToUser = async (user, newToken) => {
   try {
     user.tokens.push(newToken);
 
@@ -80,10 +88,7 @@ export const addTokenToUser = async (user: UserDTO, newToken: string) => {
   }
 };
 
-export const removeTokenFromUser = async (
-  user: UserDTO,
-  tokenToRemove: string,
-) => {
+export const removeTokenFromUser = async (user, tokenToRemove) => {
   try {
     const index = user.tokens.findIndex((token) => token === tokenToRemove);
 
@@ -104,7 +109,7 @@ export const removeTokenFromUser = async (
   }
 };
 
-export const getAllFirstOrderPortsFromDB: any = async () => {
+export const getAllFirstOrderPortsFromDB = async () => {
   try {
     return await firstOrderPortsColection.find({}).toArray();
   } catch (e) {
@@ -112,11 +117,10 @@ export const getAllFirstOrderPortsFromDB: any = async () => {
   }
 };
 
-export const getSecondOrderPort = async (id: string): Promise<any> => {
+export const getSecondOrderPort = async (id) => {
   try {
     return await secondOrderPortsColection.findOne({ id });
   } catch (e) {
     console.log(e);
   }
 };
-
