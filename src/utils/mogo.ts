@@ -9,7 +9,10 @@ import { convertItemToUserDTO } from 'src/Data_transfer_objects/user.dto';
 
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@docktech.4vkoqas.mongodb.net/?retryWrites=true&w=majority`;
 
-const client: any = new MongoClient(uri);
+// const client: any = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  keepAlive: true,
+});
 // client.connect((err: any) => {
 //   const collection = client.db('test').collection('devices');
 //   // perform actions on the collection object
